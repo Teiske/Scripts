@@ -37,7 +37,9 @@ public class Enemy_Follow : MonoBehaviour {
         // Find the player object
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
+        // Set the wait time for each position the enemy reaches
         waiTime = startWaitTime;
+
 
         moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
     }
