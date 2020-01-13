@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementTestScript : MonoBehaviour {
+public class Player_Two_Script : MonoBehaviour {
 
     [SerializeField]
     private float moveSpeed = 5f;
@@ -18,10 +18,10 @@ public class PlayerMovementTestScript : MonoBehaviour {
     void Update() {
 
         //  Assign horizontal input to the X-axis.
-        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.x = Input.GetAxisRaw("Horizontal2");
 
         //  Assing vertical input to the Y-axis.
-        movement.y = Input.GetAxisRaw("Vertical");
+        movement.y = Input.GetAxisRaw("Vertical2");
 
         // Current mouse position in pixel coordinates
         // converted to world units.

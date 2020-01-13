@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootScript : MonoBehaviour {
+public class Player_Two_Shoot_Script : MonoBehaviour {
 
     [SerializeField]
     private Transform firePoint;
@@ -13,7 +13,7 @@ public class ShootScript : MonoBehaviour {
 
     //  Update is called once per frame
     void Update() {
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Fire2")) {
             Shoot();
         }    
     }
