@@ -12,10 +12,10 @@ public class Enemy_Follow : MonoBehaviour {
 
 
     // Window floats
-    [SerializeField] private float minX;
-    [SerializeField] private float maxX;
-    [SerializeField] private float minY;
-    [SerializeField] private float maxY;
+    //[SerializeField] private float minX;
+    //[SerializeField] private float maxX;
+    //[SerializeField] private float minY;
+    //[SerializeField] private float maxY;
 
     // Time floats
                      private float waiTime;
@@ -33,7 +33,7 @@ public class Enemy_Follow : MonoBehaviour {
         // Set the wait time for each position the enemy reaches
         waiTime = startWaitTime;
 
-        moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        //moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
     }
 
     // Update is called once per frame

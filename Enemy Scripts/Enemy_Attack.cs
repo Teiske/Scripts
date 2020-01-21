@@ -4,19 +4,30 @@ using UnityEngine;
 
 public class Enemy_Attack : MonoBehaviour {
 
-    [SerializeField] private float damage;
+    [SerializeField] private float attackDistance;
+    [SerializeField] private float attackDamage;
     [SerializeField] private Health_System health_System;
 
-    private void OnCollisionEnter2D (Collider2D collision) {
+    private bool playerInRange;
 
-        if (collision.CompareTag("Player")) {
+    private Transform player;
+
+    private void Start() {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+
+    private void Update() {
+        if (Vector3.Distance(transform.position, player.position) <= attackDistance) {
             Damage();
-            Debug.Log("Collision");
+            playerInRange = true;
+        }
+        else {
+            playerInRange = false;
         }
     }
 
-    void Damage() {
-        health_System.Health -= damage;
+    private void Damage() {
+        health_System.Health -= attackDamage;
         health_System.UpdateHealth();
     }
 }

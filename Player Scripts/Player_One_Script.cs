@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class Player_One_Script : MonoBehaviour {
 
-    [SerializeField]
-    private float moveSpeed = 5f;
-    [SerializeField]
-    private Rigidbody2D rb2D;
-    [SerializeField]
-    private Camera cam;
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private Rigidbody2D rb2D;
+    [SerializeField] private Camera cam;
 
     Vector2 movement;
     Vector2 aimPosition;
