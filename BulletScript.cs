@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour {
 
-    [SerializeField]
-    private GameObject hitEffect;
+    [SerializeField] private GameObject hitEffect;
 
     private void OnCollisionEnter2D(Collision2D collision) {
 
@@ -21,5 +20,4 @@ public class BulletScript : MonoBehaviour {
         Destroy(gameObject);
     }
 
-    
 }

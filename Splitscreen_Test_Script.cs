@@ -13,7 +13,7 @@ public class Splitscreen_Test_Script : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() { 
+    void Update() {
         cam.rect = new Rect(0f, 0f, 0.5f, 1f);
     }
 }

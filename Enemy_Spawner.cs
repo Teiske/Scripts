@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Enemy_Spawner : MonoBehaviour {
 
-    [SerializeField]
-    private Transform enemy_Object;
-    [SerializeField]
-    private int numberOfEnemies;
-    [SerializeField]
-    private float minX, maxX;
-    [SerializeField]
-    private float minY, maxY;
+    [SerializeField] private Transform enemy_Object;
+    [SerializeField] private int numberOfEnemies;
+    [SerializeField] private int maxNumberEnemies;
+    [SerializeField] private float minX, maxX;
+    [SerializeField] private float minY, maxY;
+
+    [SerializeField] private bool canSpawnEnemies;
 
     // Start is called before the first frame update
     void Start() {
@@ -21,13 +20,14 @@ public class Enemy_Spawner : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        
+
     }
 
     // Spawn enemies on a random position on the screen
     void SpawnEnemies() {
-        for (int i = 0; i < numberOfEnemies; i++) {
+        if (numberOfEnemies < maxNumberEnemies) {
             Instantiate(enemy_Object, GeneratePosition(), Quaternion.identity);
+            numberOfEnemies++;
         }
     }
 

@@ -15,7 +15,7 @@ public class Player_Two_Shoot_Script : MonoBehaviour {
     void Update() {
         if (Input.GetButtonDown("Fire2")) {
             Shoot();
-        }    
+        }
     }
 
     //  Shoot is called when the Fire1 button is pressed
