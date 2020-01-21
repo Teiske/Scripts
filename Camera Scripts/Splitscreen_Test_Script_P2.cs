@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Splitscreen_Test_Script1 : MonoBehaviour {
+public class Splitscreen_Test_Script_P2 : MonoBehaviour {
 
     [SerializeField]
     private Camera cam;
