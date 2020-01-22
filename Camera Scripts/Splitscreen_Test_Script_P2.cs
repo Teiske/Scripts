@@ -7,12 +7,12 @@ public class Splitscreen_Test_Script_P2 : MonoBehaviour {
     [SerializeField]
     private Camera cam;
 
-    // Start is called before the first frame update
+    //  Start is called before the first frame update
     void Start() {
         //cam = Camera.current;
     }
 
-    // Update is called once per frame
+    //  Update is called once per frame
     void Update() { 
         cam.rect = new Rect(0.5f, 0f, 0.5f, 1f);
     }

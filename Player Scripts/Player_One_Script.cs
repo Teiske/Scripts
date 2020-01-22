@@ -13,16 +13,16 @@ public class Player_One_Script : MonoBehaviour {
 
     //  Update is called once per frame.
     void Update() {
-
         //  Assign horizontal input to the X-axis.
         movement.x = Input.GetAxisRaw("Horizontal");
 
         //  Assing vertical input to the Y-axis.
         movement.y = Input.GetAxisRaw("Vertical");
 
-        // Current mouse position in pixel coordinates
-        // converted to world units.
+        //  Current mouse position in pixel coordinates
+        //  converted to world units.
         aimPosition = cam.ScreenToWorldPoint(Input.mousePosition);
+
     }
 
     //  FixedUpate is called a fixed amount of time

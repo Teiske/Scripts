@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Two_Shoot_Script : MonoBehaviour {
+    
+    [SerializeField] private float bulletForce = 20f;
 
-    [SerializeField]
-    private Transform firePoint;
-    [SerializeField]
-    private GameObject bulletPrefab;
-    [SerializeField]
-    private float bulletForce = 20f;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject bulletPrefab;
 
     //  Update is called once per frame
     void Update() {

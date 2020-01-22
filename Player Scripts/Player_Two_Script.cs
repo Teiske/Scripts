@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class Player_Two_Script : MonoBehaviour {
 
-    [SerializeField]
-    private float moveSpeed = 5f;
-    [SerializeField]
-    private Rigidbody2D rb2D;
-    [SerializeField]
-    private Camera cam;
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private Rigidbody2D rb2D;
+    [SerializeField] private Camera cam;
 
     Vector2 movement;
     Vector2 aimPosition;
 
     //  Update is called once per frame.
     void Update() {
-
         //  Assign horizontal input to the X-axis.
         movement.x = Input.GetAxisRaw("Horizontal2");
 
@@ -26,12 +22,12 @@ public class Player_Two_Script : MonoBehaviour {
         // Current mouse position in pixel coordinates
         // converted to world units.
         aimPosition = cam.ScreenToWorldPoint(Input.mousePosition);
+
     }
 
     //  FixedUpate is called a fixed amount of time
     //  not relying on the current frame rate.
     void FixedUpdate() {
-
         //  Moves the character in the direction 
         //  the player pushes the joystick on the controller.
         rb2D.MovePosition(rb2D.position + movement * moveSpeed * Time.fixedDeltaTime);
